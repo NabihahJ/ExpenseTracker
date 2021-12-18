@@ -1,0 +1,111 @@
+body{
+	align-items: center;
+    background: url(../images/background.jpg);
+}
+
+.app{
+	text-align: center;
+}
+
+h1{
+	text-transform: uppercase;
+}
+
+.cashflow-container { /**This is for the income/expense part*/
+    display: flex; /*This is used to put 'input' and 'expense' on the same line*/
+    box-shadow: 0px 1px 4px 1px rgba(199,199,199,1);
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-top: 20px;
+    margin-left: 500px;
+    margin-right: 500px;
+}
+
+
+.income-container {
+    border-right: 1px solid #cccccc;
+    padding-right: 50px;
+}
+
+.expense-container {
+    padding-left: 50px;
+}
+
+#income {
+    color: green;
+}
+
+#expense {
+    color: red;
+}
+
+#incomeval {
+    color: green;
+}
+
+#expenseval {
+    color: red;
+}
+
+.transaction-container { /**This is for the income/expense part*/
+    display: flex; /*This is used to put 'input' and 'expense' on the same line*/
+    box-shadow: 0px 1px 4px 1px rgba(199,199,199,1);
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin-top: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+
+.add-income {
+    border-right: 1px solid #cccccc;
+    padding-right: 180px;
+}
+
+.add-expense {
+    padding-left: 180px;
+}
+
+.form-container form input[type=text]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-container form input[type=number]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-container form button{
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#incomeBtn {
+    background-color: green;
+}
+
+#expenseBtn {
+    background-color: red;
+}
