@@ -51,31 +51,38 @@
 		$username = $_POST['username'];
 		$password = $_POST['cpassword'];
 
-		// sql code to insert into database
-		$sql = "INSERT INTO users SET
-			username = '$username',
+		$sql2 = "SELECT * FROM users WHERE username = $username";
+		$res2 = mysqli_query($conn, $sql2);
+		
+			// sql code to insert into database
+			$sql = "INSERT INTO users SET
+			username = '$username', 
 			password = '$password'
-		";
+			";
 
-		//save to db
-		$res = mysqli_query($conn, $sql) or die(mysqli_error());
+			//save to db
+			$res = mysqli_query($conn, $sql) or die(mysqli_error());
 
-		$sql1 = "INSERT INTO totalbalance SET
-			username = '$username',
-			balance = 0,
-			totincome = 0,
-			totexpense = 0
-		";
-		$res1 = mysqli_query($conn, $sql1) or die(mysqli_error());
+			$sql1 = "INSERT INTO totalbalance SET
+				username = '$username',
+				balance = 0,
+				totincome = 0,
+				totexpense = 0
+			";
+			$res1 = mysqli_query($conn, $sql1) or die(mysqli_error());
 
-		//verify
-		if($res == TRUE){
-			$_SESSION['addu'] = "User has been input";
-			$_SESSION['user'] = $username;
-			header("location:".SITEURL.'myaccount.php');
-		}else{
-			$_SESSION['addu'] = "Failed to add new user";
-			header("location:".SITEURL.'register.php');
-		}
+			//verify
+			if($res == TRUE){
+				$_SESSION['addu'] = "User has been input";
+				$_SESSION['user'] = $username;
+				header("location:".SITEURL.'myaccount.php');
+			}else{
+				$_SESSION['addu'] = "Failed to add new user";
+				header("location:".SITEURL.'register.php');
+			}
+
+		
+
+		
 	}
 ?>

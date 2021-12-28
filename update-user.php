@@ -56,6 +56,7 @@
 <?php
 	//check submit
 	if(isset($_POST['submit'])){
+		$oldname = $_SESSION['user'];
 		//get data from form
 		$id=$_POST['id'];
 		$username=$_POST['username'];
@@ -71,6 +72,7 @@
 		//execute
 		$res = mysqli_query($conn, $sql);
 
+		$_SESSION['user'] = $username;
 		//check if success
 		if($res==TRUE){
 			$_SESSION['update'] = "Account updated successfully";

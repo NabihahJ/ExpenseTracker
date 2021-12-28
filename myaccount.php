@@ -63,7 +63,11 @@
 
 		<hr>
         <button onclick="hstransaction()">Show all transactions</button>
-        <button onclick="hsgraph()">Graph representation</button>
+		<a href="graph.php"> 
+			<button>Graph Representation</button>
+		</a>
+
+        
 
         <div id="transaction" style="display:none">
         	<table class="tbl-full">
